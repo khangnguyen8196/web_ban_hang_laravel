@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -20,14 +22,12 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+
+
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::get('/register',[RegisterController::class,'index'])->name('register');
-Route::get('/login',[LoginController::class,'index'])->name('login');
-
-Route::get('/allUser',[UserController::class, 'AllUser'])->name('allUser');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

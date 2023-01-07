@@ -56,13 +56,13 @@
 
                     <ul class="nav nav-treeview" style="display: block;">
                         <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
+                            <a href="{{route('add')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm người dùng</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="allUser" class="nav-link">
+                            <a href="{{route('listUser')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách người dùng</p>
                             </a>
