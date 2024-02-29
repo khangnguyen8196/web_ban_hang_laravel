@@ -15,35 +15,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package projectndl.crawler_data_0_1;
-
-import routines.Numeric;
-import routines.DataOperation;
-import routines.TalendDataGenerator;
-import routines.TalendString;
-import routines.StringHandling;
-import routines.Relational;
-import routines.TalendDate;
-import routines.GetISBN13;
-import routines.Mathematical;
-import routines.system.*;
-import routines.system.api.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.math.BigDecimal;
-import java.io.ByteArrayOutputStream;
-import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.ObjectInputStream;
-import java.io.IOException;
-import java.util.Comparator;
-
 //the import part of tJava_10
-import java.util.*;
 
 //the import part of tJava_1
 //import java.util.List;
@@ -90,27 +62,20 @@ import java.util.*;
  * @status 
  */
 public class CRAWLER_DATA implements TalendJob {
+	
+	// public final $obj = new stdClass();
+	// // for transmiting parameters purpose
+	// private $valueObject = null;
+	// public function getValueObject() {
+	// 	return $this->valueObject;
+	// }
+	// public function setValueObject($valueObject) {
+	// 	$this->valueObject = $valueObject;
+	// }
+	// private const defaultCharset = mb_internal_encoding();
+	// private const utf8Charset = "UTF-8";
 
-	public final Object obj = new Object();
-
-	// for transmiting parameters purpose
-	private Object valueObject = null;
-
-	public Object getValueObject() {
-		return this.valueObject;
-	}
-
-	public void setValueObject(Object valueObject) {
-		this.valueObject = valueObject;
-	}
-
-	private final static String defaultCharset = java.nio.charset.Charset
-			.defaultCharset().name();
-
-	private final static String utf8Charset = "UTF-8";
-
-	// create and load default properties
-	private java.util.Properties defaultProps = new java.util.Properties();
+	// private $defaultProps = new stdClass();
 
 	// create application properties with default
 	public class ContextProperties extends java.util.Properties {

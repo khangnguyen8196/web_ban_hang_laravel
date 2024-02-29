@@ -16,6 +16,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        // $schedule->command('log:cron')->everyMinute();
+        // $schedule->command('command:batch_upload_file')->everyMinute();
+        $schedule->command('log:cron')->everyMinute();
     }
 
     /**
@@ -29,4 +32,7 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
-}
+   
+    }
+
+    
